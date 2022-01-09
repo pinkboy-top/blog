@@ -1,0 +1,151 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+# 头像图标设置
+avatar: https://i.loli.net/2020/09/20/RadofFlH9Jq8OAp.jpg # 网站 Logo
+background: # 既是博客的背景，又是文章默认头图
+  path: https://i.loli.net/2020/09/20/QmM26zgB1LdYRKl.jpg
+  width: 1440
+  height: 960
+favicon:
+  href: https://i.loli.net/2020/09/20/RadofFlH9Jq8OAp.jpg # 网站图标
+  type: image/x-icon # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+
+
+# 站点配置
+# Site
+title: PinkBoy-Blog
+subtitle: 'pinkboy的博客'
+description: '进击的Coder'
+keywords: 'geek,程序员,码农,开发,后端,前端,理想主义者,宅男,改变世界,Python,Django,Flask,Vue,Linux,Golang'
+author: Pink Boy
+language: zh-Hans
+timezone: 'Asia/Shanghai'
+
+
+# 站点统计设置
+analytics: # 统计系统，目前支持 Google analytics.js 统计、Google Tag Manager 统计、CNZZ 统计、腾讯统计、51.La统计、百度统计
+  google_site_id: #<ID>
+  gtags_site_id: #<ID>
+  cnzz_site_id: #<ID>
+  tencent_site_id: 500729960 #<ID>
+  la_site_id: #<ID>
+  baidu_site_id: #<ID>
+  gtm_container_id: #<ID>
+
+
+# 评论配置
+comment: gitalk # 评论框，目前支持 gitalk,gitment,valine,disqus,disqusjs,changyan,livere,DiscussBot
+
+gitalk:
+  admin: pinkboy-top # 拥有对该repo进行操作的 GitHub username
+  owner: pinkboy-top # 持有该 repo 的 GitHub username
+  repo: issue # 存放评论的 issue 所在的 repo
+  clientID: e82f693f9eca99555845 # GitHub Client ID
+  clientSecret: 71a7ade64e3293d7ca961166771b079e05f83f7b # GitHub Client Secret
+
+gitment:
+  owner: pinkboy-top # 持有该 repo 的 GitHub username
+  repo: issue # 存放评论的 issue 所在的 repo
+  clientID: e82f693f9eca99555845 # GitHub Client ID
+  clientSecret: 71a7ade64e3293d7ca961166771b079e05f83f7b # GitHub Client Secret
+
+
+# URL
+# url链接配置
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: https://www.pinkboy.top
+root: /
+permalink: :year/:month/:day/:post_title/
+permalink_defaults: page.title
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+# 文件目录设置
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+# 文章设置
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+# 代码高亮
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace: ''
+  wrap: false
+  hljs: true
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+# 分类和便签设置
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+# 分页设置
+per_page: 10
+pagination_dir: page
+
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# 博客主题配置
+theme: nexmoe
+
+# 部署博客配置
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'
+  repo: 'https://github.com/pinkboy-top/.github.io.git'
+  branch: 'master'
